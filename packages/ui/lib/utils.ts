@@ -1,9 +1,4 @@
-import {
-  HomeIcon,
-  QuestionMarkCircleIcon,
-  UsersIcon,
-  LogoutIcon,
-} from "@heroicons/react/outline";
+import { HomeIcon, QuestionMarkCircleIcon, UsersIcon } from "@heroicons/react/outline";
 import {
   TChainVoteArgs,
   TFormInputs,
@@ -22,12 +17,7 @@ import algoliasearch, { AlgoliaSearchOptions } from "algoliasearch";
 import moment from "moment";
 import { TMiaStxBalance, TStxUsdPrice } from "./store/ui";
 
-import {
-  stringAsciiCV,
-  stringUtf8CV,
-  trueCV,
-  falseCV,
-} from "@stacks/transactions";
+import { falseCV, stringAsciiCV, stringUtf8CV, trueCV } from "@stacks/transactions";
 
 export function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -44,7 +34,7 @@ export const navigation: TNavigation[] = [
 ];
 export const isCurrentLink = (
   router: Record<string, unknown>,
-  href: string
+  href: string,
 ) => {
   return router.pathname == href;
 };
@@ -57,7 +47,7 @@ export const algoliaClient = (options?: AlgoliaSearchOptions) =>
   algoliasearch(
     process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
     process.env.NEXT_PUBLIC_ALGOLIA_FRONTEND_KEY,
-    options
+    options,
   );
 
 export const summarize = (content: string, length: number = 100) => {
@@ -93,7 +83,7 @@ const BASE_MOCK_URL = "https://dummyapi.io/data/v1/";
 
 export const prepareMockUrl = (
   type: string,
-  options: Record<string, unknown>
+  options: Record<string, unknown>,
 ): string => {
   return `${BASE_MOCK_URL}${type}?${objectToQueryString(options)}`;
 };
@@ -147,7 +137,7 @@ export const membershipYupSchema = yup.object().shape({
 });
 
 export const prepareProfile: (data: TProfileFormInputs) => TProfile = (
-  data
+  data,
 ) => {
   return {
     ...data,
@@ -159,7 +149,7 @@ export const prepareProfile: (data: TProfileFormInputs) => TProfile = (
 export const prepareProposal: (
   data: TFormInputs,
   owner: TProfile,
-  summaryLength?: number
+  summaryLength?: number,
 ) => TProposal<TVoteSingle> = (data, owner, summaryLength) => {
   return {
     body: data.content,
@@ -179,11 +169,11 @@ export const getBallot = (payload: { vote: TRadioGroupSettings }) => {
 };
 
 export const prepareVote = ({
-  proposal,
-  voter,
-  payload,
-  onChainLink,
-}: {
+                              proposal,
+                              voter,
+                              payload,
+                              onChainLink,
+                            }: {
   proposal: TProposal<TVoteSingle> | any;
   payload: { vote: TRadioGroupSettings };
   voter: TProfile;
@@ -221,7 +211,7 @@ const SEARCH_CURRENCY = "usd";
 
 const getMiaSTXbalance = async () => {
   const response = await fetch(
-    `${CORE_STX_API_ADDRESS}/address/${MiamiSTXAddress}/stx`
+    `${CORE_STX_API_ADDRESS}/address/${MiamiSTXAddress}/stx`,
   );
   const result = (await response.json()) as TMiaStxBalance;
   console.log(result);
@@ -248,12 +238,12 @@ export const getMiaUsdValue = async () => {
 };
 
 export const prepareVoteArgs = ({
-  name,
-  email,
-  ballot,
-  userId,
-  proposalId,
-}: TChainVoteArgs) => {
+                                  name,
+                                  email,
+                                  ballot,
+                                  userId,
+                                  proposalId,
+                                }: TChainVoteArgs) => {
   const _ballot = ballot ? trueCV() : falseCV();
   return [
     stringAsciiCV(proposalId),

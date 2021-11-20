@@ -14,7 +14,7 @@ const MvUserProfileComponent: React.FC = () => {
   const [selectedMember, setMember] = useAtom(selectedMemberAtom);
   const setPanel = useUpdateAtom(slideOutPanelAtom);
 
-  
+
   const onSelect = () => {
     if (profile) {
       setPanel({ show: true, component: MvProfileDetail, title: "Profile" });
@@ -25,7 +25,7 @@ const MvUserProfileComponent: React.FC = () => {
   return !profile? (
     <MvLoader isPage={false} />
   ) : (
-    <div className="flex-shrink-0 flex bg-indigo-200 p-4">
+    <div className="flex-shrink-0 flex bg-white p-6">
       <button onClick={onSelect} className="flex-shrink-0 w-full group block">
         <div className="flex items-center">
             <MvAvatar
@@ -34,8 +34,8 @@ const MvUserProfileComponent: React.FC = () => {
               colorInner={iconColors.avatar.inner_green}
               color={iconColors.avatar.red}
               size={iconSizes.md}
-            /> 
-          <div className=" ml-3">
+            />
+          <div className="ml-3 flex items-start flex-col">
             <p className="text-sm w-40 truncate font-medium text-gray-900">
               {profile.name}
             </p>

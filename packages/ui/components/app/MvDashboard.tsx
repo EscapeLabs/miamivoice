@@ -32,7 +32,7 @@ export const Dashboard: React.FC = () => {
   }, [])
   return (
     <>
-      <MvSectionHeader link={LINK} linkTitle={LINK_TITLE} />
+      {/*<MvSectionHeader link={LINK} linkTitle={LINK_TITLE} />*/}
       <InstantSearch
         indexName={process.env.NEXT_PUBLIC_ALGOLIA_DEFAULT_INDEX}
         searchClient={algoliaClient()}
