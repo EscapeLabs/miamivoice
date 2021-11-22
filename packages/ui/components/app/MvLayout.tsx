@@ -150,7 +150,7 @@ export const Layout: React.FC<{ title?: string; isProtected?: boolean }> = ({
                 <div className="py-6">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="page-heading">
-                      <h1 className="text-4xl font-semibold text-gray-900 tracking-tighter">{title}</h1>
+                      <h1 className="text-4xl text-gray-900">{title}</h1>
                     </div>
                   </div>
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">

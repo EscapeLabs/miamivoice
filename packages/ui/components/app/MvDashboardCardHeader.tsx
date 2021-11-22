@@ -27,7 +27,7 @@ export const DashboardCardHeader: React.FC<{
               {proposal?.title}
             </a>
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             <a href="#" className="hover:underline">
               {dateGreaterThanNow(proposal?.expiryDate) ? "Closed " : "Closes "}
               {moment(proposal?.expiryDate).fromNow()}

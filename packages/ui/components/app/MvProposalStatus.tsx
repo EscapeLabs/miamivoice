@@ -3,7 +3,7 @@ import Badge from "./MvBadge";
 
 const ACTIVE = "Active";
 const CLOSED = "Closed";
-const CLOSED_COLOR = "lightGray";
+const CLOSED_COLOR = "mediumGray";
 const ACTIVE_COLOR = "indigo";
 
 export const ProposalStatus: React.FC<{ isClosed: boolean }> = ({

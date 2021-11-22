@@ -43,8 +43,8 @@ export const badgeColors = {
     text: "text-red-800",
   },
   indigo: {
-    bg: "bg-indigo-100",
-    text: "text-indigo-800",
+    bg: "bckgr-indigo",
+    text: "text-white",
   },
   purple: {
     bg: "bg-purple-100",
@@ -62,10 +62,18 @@ export const badgeColors = {
     bg: "bg-gray-700",
     text: "text-gray-100",
   },
+  mediumGray: {
+    bg: "bg-gray-500",
+    text: "text-gray-100",
+  },
   lightGray: {
     bg: "bg-gray-300",
     text: "text-gray-700",
   },
+  lightGreen: {
+    bg: 'bg-light-green',
+    text: "text-white"
+  }
 };
 
 export const iconSizes = {
