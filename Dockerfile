@@ -8,6 +8,11 @@ RUN npm ci
 # Rebuild the source code only when needed
 FROM node:14-alpine AS builder
 WORKDIR /app
+ARG NEXT_PUBLIC_ALGOLIA_APP_ID
+ARG NEXT_PUBLIC_ALGOLIA_FRONTEND_KEY
+ARG NEXT_PUBLIC_ALGOLIA_DEFAULT_INDEX
+ARG NEXT_PUBLIC_ALGOLIA_ADMIN_KEY
+
 COPY packages/ui .
 COPY --from=dependencies /app/node_modules ./node_modules
 RUN npm run build
@@ -17,7 +22,6 @@ FROM node:14-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
-
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
