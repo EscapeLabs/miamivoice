@@ -1,13 +1,6 @@
 import faker from "faker";
 import moment from "moment";
-import {
-  TProfile,
-  TVote,
-  TVoteSingle,
-  TProposalSummary,
-  TProposal,
-  TMemberStats,
-} from "../types";
+import { TMemberStats, TProfile, TProposal, TProposalSummary, TVote, TVoteSingle } from "../types";
 
 export const getProfiles = (qty: number = 10): TProfile[] => {
   return Array.from(Array(qty).keys()).map((item) => ({
@@ -15,7 +8,7 @@ export const getProfiles = (qty: number = 10): TProfile[] => {
     name: faker.name.findName(),
     id: faker.datatype.uuid(),
     imageUrl: faker.internet.avatar(),
-    isActive:true
+    isActive: true,
   }));
 };
 
@@ -26,7 +19,7 @@ export const getProfile = (id: string): TProfile => {
     bio: faker.lorem.paragraph(),
     objectID: faker.datatype.uuid(),
     imageUrl: faker.image.imageUrl(),
-    isActive:true
+    isActive: true,
   };
 };
 
@@ -46,7 +39,7 @@ export const getVotes = (qty: number = 10): TVote<TVoteSingle>[] => {
 };
 
 export const getProposals = (
-  qty: number = 30
+  qty: number = 30,
 ): TProposalSummary<TVoteSingle>[] => {
   return Array.from(Array(qty).keys()).map((item) => ({
     title: faker.lorem.sentence(),
