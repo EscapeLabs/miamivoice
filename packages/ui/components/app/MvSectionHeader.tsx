@@ -12,7 +12,7 @@ const MvSectionHeader: React.FC<{ linkTitle?: string; link?: string }> = ({
       {link && linkTitle && (
         <div className="mt-3 sm:mt-0 sm:ml-4">
           <Link href={link}>
-            <a className="btn">
+            <a className="btn return-btn">
               {linkTitle}
             </a>
           </Link>

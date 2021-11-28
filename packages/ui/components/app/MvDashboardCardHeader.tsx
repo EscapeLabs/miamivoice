@@ -15,7 +15,7 @@ export const DashboardCardHeader: React.FC<{
         <div className="flex-shrink-0">
           <MvAvatar
             colorInner={iconColors.avatar.inner_yellow}
-            color={iconColors.avatar.yellow}
+            color={iconColors.avatar.inner_indigo}
             size={iconSizes.md}
             name={proposal.owner.name}
             isText

@@ -119,7 +119,7 @@ export const Form: React.FC<{
 
 export const SubmitButton: React.FC<{ loading?: boolean }> = ({ loading }) => {
   return (
-    <button disabled={loading} type="submit" className=" form-control-btn">
+    <button disabled={loading} type="submit" className=" form-control-btn submit-btn">
       {loading && (
         <div className="mr-2">
           <MvLoader />

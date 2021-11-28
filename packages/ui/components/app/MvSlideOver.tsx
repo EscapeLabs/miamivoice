@@ -36,7 +36,7 @@ export const SlideOver: React.FC<{
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
             >
-              <div className="relative w-96">
+              <div className="relative">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-in-out duration-500"

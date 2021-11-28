@@ -1,5 +1,6 @@
 import React from "react";
 import { classNames } from "../../lib/utils";
+import { UserIcon } from "@heroicons/react/solid";
 
 const MvAvatar: React.FC<{
   isText?: boolean;
@@ -17,7 +18,7 @@ const MvAvatar: React.FC<{
       )}
     >
       <span className="text-xl  capitalize font-medium leading-none text-white">
-        {name.substr(0, 2)}
+        <UserIcon className="h-6 w-6 heroicon-stroke-w-1" aria-hidden="true" />
       </span>
     </span>
   ) : (

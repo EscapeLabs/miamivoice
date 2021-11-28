@@ -12,18 +12,12 @@ export const FAQs:TFaq[]=[{
 },
 {
     id:3,
-    question:'Where do I get Miami Coin?',
-    answer:'MiamiCoin ($MIA) is available through mining, or you can purchase $MIA at OKCoin.com.'
-    
-},
-{
-    id:4,
     question:'Is Miami going to do these things?',
     answer:'Currently, Miami Voice is a non-binding way of gathering ideas and opinions and empowering people to share and promote them. Ultimately, Miami has a new source of revenue and will spend it, and this could be one of the ways they solicit ideas and get public opinion.'
     
 },
 {
-    id:5,
+    id:4,
     question:'Who created Miami Voice?',
     answer:'Miami Voice was created by Syvita Guild, a DAO, on the foundation of daoOS, open source software that facilitates DAO governance. If you have questions or would like more information, contact the founder of daoOS and Miami Voice, Drew Falkman.'
     

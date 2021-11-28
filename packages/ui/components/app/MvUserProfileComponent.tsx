@@ -32,7 +32,7 @@ const MvUserProfileComponent: React.FC = () => {
             isText
             name={profile.name}
             colorInner={iconColors.avatar.inner_green}
-            color={iconColors.avatar.red}
+            color={iconColors.avatar.inner_indigo}
             size={iconSizes.md}
           />
           <div className="ml-3 flex items-start flex-col">
